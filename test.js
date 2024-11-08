@@ -11,9 +11,10 @@ function onIframeLoad() {
     }
 }
 
-function onSelectPlot(plot) {
-    const iFrameID = document.getElementById('plot-iframe');
+function onSelectPlot(plot, displayId) {
+    const iFrameID = document.getElementById(displayId);
     if(iFrameID) {
-        iFrameID.src = "plots/"+plot;
+        iFrameID.data = "plots/"+plot;
     }
 }
+
