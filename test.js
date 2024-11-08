@@ -6,8 +6,8 @@ function onIframeLoad() {
     if(iFrameID) {
         // here you can make the height, I delete it first, then I make it again
         iFrameID.height = "";
-        iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "px";
-        iFrameID.width = iFrameID.contentWindow.document.body.scrollWidth + "px";
+        iFrameID.height = iFrameID.contentWindow.document.body.scrollHeight + "20px";
+        iFrameID.width = iFrameID.contentWindow.document.body.scrollWidth + "20px";
     }
 }
 

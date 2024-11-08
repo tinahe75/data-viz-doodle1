@@ -4,6 +4,10 @@ body {
     padding: 20px;
 }
 
+iframe {
+    border: none;
+}
+
 .plot-container {
     width: 100%;
     height: 100%;
@@ -27,7 +31,7 @@ body {
     cursor: pointer;
     font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
     font-size: 100%;
-    height: 44px;
+    padding: 12px 24px;
     line-height: 1.15;
     margin: 12px 0 0;
     outline: none;
@@ -42,6 +46,12 @@ body {
     -webkit-user-select: none;
     touch-action: manipulation;
     width: 100%;
+    transition: 300ms;
+}
+
+.my-button:hover {
+    color:#405bf5be;
+    padding: 15px 30px;
 }
     
 .my-button:disabled {
