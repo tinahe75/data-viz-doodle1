@@ -15,6 +15,11 @@ iframe {
     font-weight: bold;
 }
 
+.page-subtitle{
+    padding: 10px 20px;
+    font-size:24px;
+}
+
 .section-title{
     padding: 20px 0 20px 0;
     font-size: 36px;
