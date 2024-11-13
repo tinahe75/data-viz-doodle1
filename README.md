@@ -5,3 +5,12 @@
 - Preprocessing and EDA were done via Colab + Plotly + Pandas + Python. 
 
 - View the dashboard at: https://tinahe75.github.io/test1/
+
+
+<br/>
+
+### TODO:
+
+- [ ] include Colab notebook
+- [ ] add highlighting for active buttons
+- [ ] add transition when switching between figures
