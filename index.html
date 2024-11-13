@@ -28,12 +28,6 @@
                     <div class="plot-note" >
                         Monthly stats are aggregated 2 ways: by price and by number of items. 
                     </div>
-                    <!-- <iframe
-                        id="plot-iframe"
-                        src="plots/price_purchased_per_month.html"
-                        onload="onIframeLoad()"
-                    >
-                    </iframe> -->
                     <object type="text/html" id="monthly-display" data="plots/price_per_month.html" style="width:1250px; height:450px;"></object>
                     
                 </div>
@@ -50,6 +44,22 @@
                 </div>
                     
             </div>
+        </div>
+        <div class="plot-area-row">
+            <div class="intervals">
+                <div class="section-title">
+                    Days between purchases
+                </div>
+                <div class="plot-note" >
+                    What's the number of days between purchases? This plot visualizes the gap length between purchases. <br/>
+                    The entire bar adds up to the number of days in 2024. Vertical lines are purchases. Shorter interval = lighter colour.
+                </div>
+                <div class="plot-container">
+                    <object type="text/html" class="embedded-plot" data="plots/intervals.html" style="width:1650px; height:250px; "></object>
+                    
+                </div>
+            </div>
+
         </div>
         <div class="plot-area-row">
             <div class="waffle-charts">
