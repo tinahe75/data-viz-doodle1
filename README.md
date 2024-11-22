@@ -11,6 +11,6 @@
 
 ### TODO:
 
-- [ ] include Colab notebook
-- [ ] add highlighting for active buttons
+- [x] include Colab notebook
+- [x] add highlighting for active buttons
 - [ ] add transition when switching between figures
