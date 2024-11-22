@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>title</title>
-    <script src="test.js"></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -21,32 +21,21 @@
                 </div>
                 <div class="plot-container">
                     <div class="button-wrapper">
-                        <div class="my-button" onclick="onSelectPlot('price_per_month.html', 'monthly-display')">
+                        <div class="my-button highlighted" onclick="onSelectPlot(this, 'price_per_month.html', 'monthly-display')">
                             Price
                         </div>
-                        <div class="my-button" onclick="onSelectPlot('items_per_month.html', 'monthly-display')">
+                        <div class="my-button" onclick="onSelectPlot(this, 'items_per_month.html', 'monthly-display')">
                             Num of Items
                         </div>
                     </div>
                     <div class="plot-note" >
                         Monthly stats are aggregated 2 ways: by price and by number of items. 
                     </div>
-                    <object type="text/html" id="monthly-display" data="plots/price_per_month.html" style="width:1250px; height:450px;"></object>
+                    <object type="text/html" id="monthly-display" data="plots/price_per_month.html" style="width:1050px; height:350px;"></object>
                     
                 </div>
             </div>
-            <div class="agg-stats">
-                <div class="section-title">
-                    Stats at a glance
-                </div>
-                <div class="text-container">
-                    💵 Total cost: <b>$1308 </b><br/>
-                    🪙 Average cost per item: <b>$52 </b><br/>
-                    🏷️ Percentage of sale items: <b>32% </b><br/>
-                    🕰️ Longest gap between purchases: <b>73 days</b>
-                </div>
-                    
-            </div>
+            
         </div>
         <div class="plot-area-row">
             <div class="intervals">
@@ -55,14 +44,46 @@
                 </div>
                 <div class="plot-note" >
                     What's the number of days between purchases? This plot visualizes the gap length between purchases. <br/>
-                    The entire bar adds up to the number of days in 2024. Vertical lines are purchases. Shorter interval = lighter colour.
+                    The entire bar adds up to the number of days in 2024. Vertical lines are purchases. Shorter interval = lighter colour.<br/>
+                    🕰️ Longest gap between purchases: <b>73 days</b>
                 </div>
                 <div class="plot-container">
-                    <object type="text/html" class="embedded-plot" data="plots/intervals.html" style="width:1650px; height:250px; "></object>
+                    <object type="text/html" class="embedded-plot" data="plots/intervals.html" style="width:1100px; height:200px; "></object>
                     
                 </div>
             </div>
 
+        </div>
+        <div class="plot-area-row">
+            <div class="colour-sunburst">
+                <div class="section-title">
+                    Colours of items purchased
+                </div>
+                <div class="plot-container">
+                    <div class="plot-note" >
+                        What colours did I buy? This is a colour wheel visualization. <br/>
+                        Items are grouped by colour family and listed by colour codes.
+                    </div>
+                    <object type="text/html" class="embedded-plot" data="plots/colour_wheel.html" style="width:550px; height:550px; "></object>
+                    
+                </div>
+            </div>
+            <div class="price-distribution">
+                <div class="section-title">
+                    Price distribution
+                </div>
+                <div class="plot-container">
+                    <div class="plot-note" >
+                        Price stats at a glance:<br/>
+                        💵 Total cost: <b>$1367 </b><br/>
+                        🪙 Average cost per item: <b>$53 </b><br/>
+                        🏷️ Percentage of sale items: <b>35% </b><br/>
+                    </div>
+                    <object type="text/html" class="embedded-plot" data="plots/price_distribution.html" style="width:550px; height: 450px;"></object>
+                    
+                </div>
+            </div>
+            
         </div>
         <div class="plot-area-row">
             <div class="waffle-charts">
@@ -71,13 +92,13 @@
                 </div>
                 <div class="plot-container">
                     <div class="button-wrapper">
-                        <div class="my-button" onclick="onSelectPlot('brand_count.html', 'waffle-display')">
+                        <div class="my-button highlighted" onclick="onSelectPlot(this, 'brand_count.html', 'waffle-display')">
                             Brand
                         </div>
-                        <div class="my-button" onclick="onSelectPlot('category_count.html', 'waffle-display')">
+                        <div class="my-button" onclick="onSelectPlot(this, 'category_count.html', 'waffle-display')">
                             Category
                         </div>
-                        <div class="my-button" onclick="onSelectPlot('utility_count.html', 'waffle-display')">
+                        <div class="my-button" onclick="onSelectPlot(this, 'utility_count.html', 'waffle-display')">
                             Utility
                         </div>
                     </div>
@@ -89,36 +110,13 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;‣ COOL (rarely worn, but cool!). <br/>
                         The rest are tagged 'other'.<br/>
                     </div>
-                    <!-- <iframe
-                        id="plot-iframe"
-                        src="plots/price_purchased_per_month.html"
-                        onload="onIframeLoad()"
-                    >
-                    </iframe> -->
                     <object type="text/html" id="waffle-display" data="plots/brand_count.html" style="width:1050px; height:200px;"></object>
                     
                 </div>
             </div>
-            <div class="price-distribution">
-                <div class="section-title">
-                    Price distribution
-                </div>
-                <div class="plot-container">
-                    <object type="text/html" class="embedded-plot" data="plots/price_distribution.html" style="width:550px; height: 450px;"></object>
-                    
-                </div>
-            </div>
+            
         </div>
         <div class="plot-area-row">
-            <div class="colour-sunburst">
-                <div class="section-title">
-                    Colours of items purchased
-                </div>
-                <div class="plot-container">
-                    <object type="text/html" class="embedded-plot" data="plots/colour_wheel.html" style="width:550px; height:550px; "></object>
-                    
-                </div>
-            </div>
             <div class="season-distribution">
                 <div class="section-title">
                     Season distribution
@@ -128,11 +126,12 @@
                     This plot visualizes the number of items for various season combinations. Larger pie = larger number of items.
                 </div>
                 <div class="plot-container">
-                    <object type="text/html" class="embedded-plot" data="plots/seasons.html" style="width:1050px; height: 350px;"></object>
+                    <object type="text/html" class="embedded-plot" data="plots/seasons.html" style="width:1100px; height: 350px;"></object>
                     
                 </div>
             </div>
         </div>
+        
     </div>
     
   </body>
